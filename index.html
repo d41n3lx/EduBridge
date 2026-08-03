@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduBridge | Find Scholarships & Opportunities</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+EduBridge
+</div>
+
+<ul>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#scholarships">Scholarships</a>
+</li>
+
+<li>
+<a href="#categories">Categories</a>
+</li>
+
+<li>
+<a href="#saved">Saved</a>
+</li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Find Scholarships.
+<br>
+Unlock Opportunities.
+</h1>
+
+<p>
+
+Discover scholarships, grants and learning
+opportunities that can help you achieve
+your educational goals.
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search scholarships..."
+>
+
+<button onclick="searchScholarships()">
+Search
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURED SCHOLARSHIPS -->
+
+<section id="scholarships">
+
+<h2>
+Featured Scholarships
+</h2>
+
+<div class="scholarship-grid">
+
+<div class="scholarship-card">
+
+<h3>
+Google Africa Scholarship
+</h3>
+
+<span class="tag">
+Technology
+</span>
+
+<p>
+
+Funding support for African students
+pursuing careers in technology.
+
+</p>
+
+<div class="card-buttons">
+
+<button onclick="openModal(1)">
+View Details
+</button>
+
+<button onclick="saveScholarship('Google Africa Scholarship')">
+❤ Save
+</button>
+
+</div>
+
+</div>
+
+<div class="scholarship-card">
+
+<h3>
+Mastercard Foundation Scholars
+</h3>
+
+<span class="tag">
+Full Scholarship
+</span>
+
+<p>
+
+Full academic sponsorship for talented
+students across Africa.
+
+</p>
+
+<div class="card-buttons">
+
+<button onclick="openModal(2)">
+View Details
+</button>
+
+<button onclick="saveScholarship('Mastercard Foundation Scholars')">
+❤ Save
+</button>
+
+</div>
+
+</div>
+
+<div class="scholarship-card">
+
+<h3>
+Women In STEM Award
+</h3>
+
+<span class="tag">
+Engineering
+</span>
+
+<p>
+
+Supporting female innovators and future
+engineering leaders.
+
+</p>
+
+<div class="card-buttons">
+
+<button onclick="openModal(3)">
+View Details
+</button>
+
+<button onclick="saveScholarship('Women In STEM Award')">
+❤ Save
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+<h2>
+Browse Categories
+</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+💻 Technology
+</div>
+
+<div class="category-card">
+⚙ Engineering
+</div>
+
+<div class="category-card">
+🏥 Medicine
+</div>
+
+<div class="category-card">
+📊 Business
+</div>
+
+<div class="category-card">
+🎨 Arts
+</div>
+
+<div class="category-card">
+🔬 Research
+</div>
+
+</div>
+
+</section>
+
+<!-- SAVED SCHOLARSHIPS -->
+
+<section id="saved">
+
+<h2>
+Saved Scholarships
+</h2>
+
+<div id="savedList">
+
+<p>
+No scholarships saved yet.
+</p>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">
+×
+</span>
+
+<h2 id="modalTitle">
+Scholarship Title
+</h2>
+
+<p id="modalDescription">
+Scholarship details will appear here.
+</p>
+
+<a
+href="#"
+class="apply-btn"
+target="_blank"
+>
+Apply Now
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+EduBridge
+</h3>
+
+<p>
+
+Helping students discover opportunities
+and build brighter futures.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
