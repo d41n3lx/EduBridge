@@ -1,298 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>EduBridge | Find Scholarships & Opportunities</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBridge | Global Scholarship & Grant Engine</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-EduBridge
-</div>
-
-<ul>
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#scholarships">Scholarships</a>
-</li>
-
-<li>
-<a href="#categories">Categories</a>
-</li>
-
-<li>
-<a href="#saved">Saved</a>
-</li>
-
-</ul>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>
-Find Scholarships.
-<br>
-Unlock Opportunities.
-</h1>
-
-<p>
-
-Discover scholarships, grants and learning
-opportunities that can help you achieve
-your educational goals.
-
-</p>
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search scholarships..."
->
-
-<button onclick="searchScholarships()">
-Search
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURED SCHOLARSHIPS -->
-
-<section id="scholarships">
-
-<h2>
-Featured Scholarships
-</h2>
-
-<div class="scholarship-grid">
-
-<div class="scholarship-card">
-
-<h3>
-Google Africa Scholarship
-</h3>
-
-<span class="tag">
-Technology
-</span>
-
-<p>
-
-Funding support for African students
-pursuing careers in technology.
-
-</p>
-
-<div class="card-buttons">
-
-<button onclick="openModal(1)">
-View Details
-</button>
-
-<button onclick="saveScholarship('Google Africa Scholarship')">
-❤ Save
-</button>
-
-</div>
-
-</div>
-
-<div class="scholarship-card">
-
-<h3>
-Mastercard Foundation Scholars
-</h3>
-
-<span class="tag">
-Full Scholarship
-</span>
-
-<p>
-
-Full academic sponsorship for talented
-students across Africa.
-
-</p>
-
-<div class="card-buttons">
-
-<button onclick="openModal(2)">
-View Details
-</button>
-
-<button onclick="saveScholarship('Mastercard Foundation Scholars')">
-❤ Save
-</button>
-
-</div>
-
-</div>
-
-<div class="scholarship-card">
-
-<h3>
-Women In STEM Award
-</h3>
-
-<span class="tag">
-Engineering
-</span>
-
-<p>
-
-Supporting female innovators and future
-engineering leaders.
-
-</p>
-
-<div class="card-buttons">
-
-<button onclick="openModal(3)">
-View Details
-</button>
-
-<button onclick="saveScholarship('Women In STEM Award')">
-❤ Save
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CATEGORIES -->
-
-<section id="categories">
-
-<h2>
-Browse Categories
-</h2>
-
-<div class="category-grid">
-
-<div class="category-card">
-💻 Technology
-</div>
-
-<div class="category-card">
-⚙ Engineering
-</div>
-
-<div class="category-card">
-🏥 Medicine
-</div>
-
-<div class="category-card">
-📊 Business
-</div>
-
-<div class="category-card">
-🎨 Arts
-</div>
-
-<div class="category-card">
-🔬 Research
-</div>
-
-</div>
-
-</section>
-
-<!-- SAVED SCHOLARSHIPS -->
-
-<section id="saved">
-
-<h2>
-Saved Scholarships
-</h2>
-
-<div id="savedList">
-
-<p>
-No scholarships saved yet.
-</p>
-
-</div>
-
-</section>
-
-<!-- MODAL -->
-
-<div class="modal" id="modal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeModal()">
-×
-</span>
-
-<h2 id="modalTitle">
-Scholarship Title
-</h2>
-
-<p id="modalDescription">
-Scholarship details will appear here.
-</p>
-
-<a
-href="#"
-class="apply-btn"
-target="_blank"
->
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-
-<footer>
-
-<h3>
-EduBridge
-</h3>
-
-<p>
-
-Helping students discover opportunities
-and build brighter futures.
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <nav>
+    <div class="logo">EduBridge<span class="dot">.</span></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#scholarships">Explore</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#saved">Saved <span id="savedBadge">0</span></a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="badge-pill">✨ Over $2.5M in Verified Opportunities</div>
+      <h1>Fund Your Future.<br><span class="gradient-text">Unlock Opportunities.</span></h1>
+      <p>Discover fully-funded scholarships, research grants, and learning opportunities curated for students worldwide.</p>
+      
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search by name, provider, or keyword..." onkeyup="filterScholarships()">
+        </div>
+        
+        <div class="filter-group">
+          <select id="levelFilter" onchange="filterScholarships()">
+            <option value="all">All Degrees</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Master's">Master's</option>
+            <option value="PhD">PhD</option>
+            <option value="Bootcamp">Bootcamp/Fellowship</option>
+          </select>
+
+          <select id="fundingFilter" onchange="filterScholarships()">
+            <option value="all">All Funding Types</option>
+            <option value="Full Scholarship">Fully Funded</option>
+            <option value="Partial Scholarship">Partial Funding</option>
+            <option value="Grant">Grant / Award</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scholarships">
+    <div class="section-header">
+      <h2>Explore Opportunities</h2>
+      <p>Hand-picked, active funding opportunities with verified deadlines.</p>
+    </div>
+
+    <div class="scholarship-grid" id="scholarshipGrid">
+      </div>
+  </section>
+
+  <section id="categories">
+    <div class="section-header">
+      <h2>Browse by Field</h2>
+      <p>Filter scholarships tailored to your academic discipline.</p>
+    </div>
+
+    <div class="category-grid">
+      <div class="category-card" onclick="selectCategory('Technology')">
+        <i class="fas fa-laptop-code"></i>
+        <span>Technology</span>
+      </div>
+      <div class="category-card" onclick="selectCategory('Engineering')">
+        <i class="fas fa-cogs"></i>
+        <span>Engineering</span>
+      </div>
+      <div class="category-card" onclick="selectCategory('Medicine')">
+        <i class="fas fa-notes-medical"></i>
+        <span>Medicine</span>
+      </div>
+      <div class="category-card" onclick="selectCategory('Business')">
+        <i class="fas fa-chart-line"></i>
+        <span>Business</span>
+      </div>
+      <div class="category-card" onclick="selectCategory('Arts')">
+        <i class="fas fa-palette"></i>
+        <span>Arts & Design</span>
+      </div>
+      <div class="category-card" onclick="selectCategory('Research')">
+        <i class="fas fa-microscope"></i>
+        <span>Research</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="saved">
+    <div class="section-header">
+      <h2>Your Saved Opportunities</h2>
+      <p>Bookmark opportunities to apply before deadlines close.</p>
+    </div>
+
+    <div id="savedList" class="saved-container">
+      </div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-header">
+        <span class="tag" id="modalTag">Category</span>
+        <h2 id="modalTitle">Scholarship Title</h2>
+      </div>
+      <div class="modal-body">
+        <p id="modalDescription">Details description text...</p>
+        <div class="modal-meta">
+          <p><strong>Level:</strong> <span id="modalLevel">-</span></p>
+          <p><strong>Funding:</strong> <span id="modalFunding">-</span></p>
+          <p><strong>Deadline:</strong> <span id="modalDeadline">-</span></p>
+        </div>
+      </div>
+      <a href="#" id="modalApplyBtn" class="apply-btn" target="_blank">Official Application Site <i class="fas fa-external-link-alt"></i></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>EduBridge<span class="dot">.</span></h3>
+      <p>Democratizing access to higher education through open opportunity discovery.</p>
+      <p class="copyright">© 2026 EduBridge | Engineered by Daniel Gwoloba</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-</html>
+              
+ </html>
